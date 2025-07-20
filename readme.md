@@ -1,4 +1,4 @@
-# uv example: offline 10 minutes
+# Unexpected: uv works offline initially, but fails after 5-10 minutes
 
 To reproduce:
 
@@ -10,7 +10,7 @@ To reproduce:
 - run `just ideal` (tests should fail)
 
 
-## Unexpected: uv works offline initially, but fails after 5-10 minutes
+## Github Issue text
 
 I'm new to `uv`, and so far it has been great. Thanks! But in true "If You Give a Mouse a Cookie" fashion, I've got an additional request :)
 
