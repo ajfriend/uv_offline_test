@@ -2,13 +2,8 @@ ideal:
 	just purge
 	just test
 
-test: install
-	uv run --no-editable pytest
-
-install:
-	uv sync --no-editable
-	uv pip uninstall uv_offline_test
-	uv pip install .
+test:
+	uv run pytest
 
 purge: clean
 	-rm uv.lock

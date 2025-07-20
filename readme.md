@@ -33,3 +33,12 @@ at 05:30:57 PM
 at 05:31:05 PM
 at 05:31:14 PM: worked offline
 at 05:31:25 PM: failed
+
+
+# simplified run (editable install)
+
+at 05:45:16 PM: worked online
+at 05:45:46 PM: worked offline
+at 05:46:07 PM: worked offline
+
+at 05:50:23 PM: failed
