@@ -1,7 +1,7 @@
 i might usually not want to avoid an editable install, delete the venv, or the lockfile, but i also dont' want to be *afraid* to do these things.
 
 
-uv is
+uv is great, but in true "if you give a mouse a cookie" fashion, i've got some additional requests.
 
 
 unexpected. at least, i had to experiment to understand the behavior of uv. it seems like there's about a 5 minute cache timeout?
