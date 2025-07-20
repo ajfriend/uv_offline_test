@@ -16,7 +16,7 @@ I'm new to `uv`, and so far it has been great. Thanks! But in true "If You Give 
 
 I'm often working without an internet connection, and it would be great if I could depend on `uv`'s package caching to build a project from scratch.
 
-However, as I've played with it, it seems like this behavior only works for about 5--10 minutes after going offline, but fails afterwards with an error like:
+However, as I've played with it, it seems like this behavior only works for about 5--10 minutes after going offline, and fails afterwards with an error like:
 
 ```
 Using CPython 3.13.5
@@ -29,9 +29,9 @@ Creating virtual environment at: .venv
   Caused by: failed to lookup address information: nodename nor servname provided, or not known
 ```
 
-I've got an example repo with reproduction instructions at: https://github.com/ajfriend/uv_offline_test
+I've got a minimal example repo with reproduction instructions at: https://github.com/ajfriend/uv_offline_test
 
-Normally, I might not delete the `.venv` or delete the lockfile, but it would be nice to not be afraid of doing these things, especially since they do work for about 10 minutes, currently.
+(Normally, I might not delete the `.venv` or delete the lockfile, but it would be nice to not be afraid of doing these things, especially since they **do work** for about 10 minutes, currently.)
 
 This behavior was surprising/unexpected to me since things worked initially offline, but failed later in the day. I had to do some experimentation to determine that the threshold was about 10 minutes. (In at least one test, it happened after 5 minutes, so it might be variable?)
 
