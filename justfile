@@ -1,16 +1,14 @@
-_:
-	just --list
+ideal:
+	just purge
+	just test
 
-init:
-	uv venv
-	just reinstall
+test: install
+	uv run --no-editable pytest
 
-reinstall:
+install:
+	uv sync --no-editable
 	uv pip uninstall uv_offline_test
 	uv pip install .
-
-test: reinstall
-	uv run pytest
 
 purge: clean
 	-rm uv.lock
@@ -30,14 +28,3 @@ clean:
 
 _remove name:
 	-@find . -name '{{name}}' -exec rm -r {} +
-
-
-does_not_work_in_afternoon:
-	just purge
-	just init
-	just test
-
-does_work_in_afternoon:
-	just clean
-	just init
-	just test
