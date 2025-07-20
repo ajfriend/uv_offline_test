@@ -14,8 +14,7 @@ To reproduce:
 
 I'm new to `uv`, and so far it has been great. Thanks! But in true "If You Give a Mouse a Cookie" fashion, I've got an additional request :)
 
-I'm often working without an internet connection,
-and it would be great if I could depend on `uv`'s package caching to build a project from scratch.
+I'm often working without an internet connection, and it would be great if I could depend on `uv`'s package caching to build a project from scratch.
 
 However, as I've played with it, it seems like this behavior only works for about 5--10 minutes after going offline, but fails afterwards with an error like:
 
@@ -30,7 +29,7 @@ Creating virtual environment at: .venv
   Caused by: failed to lookup address information: nodename nor servname provided, or not known
 ```
 
-I've got an example repo with reproduction instructions at:
+I've got an example repo with reproduction instructions at: https://github.com/ajfriend/uv_offline_test
 
 Normally, I might not delete the `.venv` or delete the lockfile, but it would be nice to not be afraid of doing these things, especially since they do work for about 10 minutes, currently.
 
