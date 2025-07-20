@@ -1,6 +1,3 @@
 .venv
 *.pyc
 .ipynb_checkpoints
-
-# sorry!
-uv.lock
