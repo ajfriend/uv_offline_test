@@ -1,5 +1,7 @@
 # Unexpected: uv works offline initially, but fails after 5-10 minutes
 
+https://github.com/astral-sh/uv/issues/14754
+
 To reproduce:
 
 - be online
@@ -35,6 +37,6 @@ I've got a minimal example repo with reproduction instructions at: https://githu
 
 This behavior was surprising/unexpected to me since things worked initially offline, but failed later in the day. I had to do some experimentation to determine that the threshold was about 10 minutes. (In at least one test, it happened after 5 minutes, so it might be variable?)
 
-I'm guessing this is due to some cache expiration policy? What's the reasoning behind the current 10 minutes, and would it be possible to extend it, or provide an option to do so? Would it make sense to avoid the cache expiration if `uv` notices that it is offline?
+I'm guessing this is due to some cache expiration policy? What's the reasoning behind the current 10 minutes, and would it be possible to extend it, or provide an option to do so? Would it make sense to defer/delay the cache expiration if `uv` notices that it is offline?
 
 Thanks!
